@@ -1,0 +1,42 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+body {
+  color: white;
+  background-color: #263238;
+  font-family: Arial, Helvetica, Helvetica Neue, serif;
+  margin: 0;
+}
+
+.search {
+  width: 100%;
+  border: none;
+  margin: 0;
+  padding: 10px 15px;
+  background-color: #182126;
+  color: white;
+  font-size: 24px;
+}
+
+.search:active {
+  outline-color: #485F6A;
+}
+
+.item:hover {
+  background-color: #242B30;
+}
+
+.item {
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: 1px solid #484B4F;
+  cursor: pointer;
+  margin: 0;
+}
+
+#root {
+  margin: 0;
+}
