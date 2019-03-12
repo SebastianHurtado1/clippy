@@ -8,9 +8,12 @@ const copyItemToClipboard = item => {
 
 const ItemContainer = ({ item }) => {
   return item.length > 60 ? (
-    <TruncatedItem item={item} />
+    <TruncatedItem
+      item={item}
+      copyItemToClipboard={() => copyItemToClipboard(item)}
+    />
   ) : (
-    <Item item={item} />
+    <Item item={item} copyItemToClipboard={() => copyItemToClipboard(item)} />
   );
 };
 
@@ -28,14 +31,14 @@ class TruncatedItem extends Component {
   }
 
   render() {
-    const { item } = this.props;
+    const { item, copyItemToClipboard } = this.props;
     const truncatedItem = this.state.showExpandedItem
       ? item
       : item.slice(0, 45) + '...';
 
     return (
       <div className="item__container">
-        <Item item={truncatedItem} />
+        <Item item={truncatedItem} copyItemToClipboard={copyItemToClipboard} />
         <div className="item__chevron-container">
           <ChevronArrowDown showExpandedItem={() => this.toggleItem()} />
         </div>
@@ -44,9 +47,9 @@ class TruncatedItem extends Component {
   }
 }
 
-const Item = ({ item }) => {
+const Item = ({ item, copyItemToClipboard }) => {
   return (
-    <h1 className="item" onClick={() => copyItemToClipboard(item)}>
+    <h1 className="item" onClick={copyItemToClipboard}>
       {item}
     </h1>
   );
