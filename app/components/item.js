@@ -36,7 +36,9 @@ class TruncatedItem extends Component {
     return (
       <div className="item__container">
         <Item item={truncatedItem} />
-        <ChevronArrowDown showExpandedItem={() => this.toggleItem()} />
+        <div className="item__chevron-container">
+          <ChevronArrowDown showExpandedItem={() => this.toggleItem()} />
+        </div>
       </div>
     );
   }

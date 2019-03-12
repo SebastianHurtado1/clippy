@@ -59,6 +59,12 @@ body {
   cursor: pointer;
 }
 
-.item__chevron--down:hover {
+.item__chevron-container:hover {
   background-color: #1A2126;
+}
+
+.item__chevron-container {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
 }
