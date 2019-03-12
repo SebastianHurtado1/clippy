@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { clipboard } from 'electron';
+import ItemContainer from './item';
 
 class Clippy extends Component {
   constructor(props) {
@@ -48,25 +49,13 @@ class Clippy extends Component {
     this.setState({ searchItems: filteredItems });
   }
 
-  copyItemToClipboard(item) {
-    clipboard.writeText(item);
-  }
-
   /**
    * Creates elements from the clipboard. This will also truncate and place an ellipis on an element if:
    * * element's length > 40
    * @param {Array} items | the items that are copied onto the clipboard or the items that match the search
    */
   createItems(items) {
-    return items.map((item, i) => (
-      <h1
-        key={i + item}
-        className="item"
-        onClick={() => this.copyItemToClipboard(item)}
-      >
-        {item.length > 20 ? item.slice(0, 45) + '...' : item}
-      </h1>
-    ));
+    return items.map((item, i) => <ItemContainer key={i + item} item={item} />);
   }
 
   render() {
