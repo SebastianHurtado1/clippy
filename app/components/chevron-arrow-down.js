@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ChevronArrowDown = ({ showExpandedItem }) => (
+const ChevronArrowDown = () => (
   <svg
     version="1.1"
     id="Capa_1"
@@ -12,7 +12,6 @@ const ChevronArrowDown = ({ showExpandedItem }) => (
     height="24px"
     viewBox="0 0 424 424"
     xmlSpace="preserve"
-    onClick={showExpandedItem}
     className="item__chevron--down"
   >
     <g className="item__chevron--down">

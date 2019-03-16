@@ -39,8 +39,11 @@ class TruncatedItem extends Component {
     return (
       <div className="item__container">
         <Item item={truncatedItem} copyItemToClipboard={copyItemToClipboard} />
-        <div className="item__chevron-container">
-          <ChevronArrowDown showExpandedItem={() => this.toggleItem()} />
+        <div
+          className="item__chevron-container"
+          onClick={() => this.toggleItem()}
+        >
+          <ChevronArrowDown />
         </div>
       </div>
     );

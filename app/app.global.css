@@ -21,8 +21,8 @@ body {
   font-size: 24px;
 }
 
-.search:active {
-  outline-color: #485F6A;
+.search:focus {
+  outline: none;
 }
 
 .item:hover {
@@ -36,6 +36,7 @@ body {
   cursor: pointer;
   margin: 0;
   flex: 1;
+  word-break: break-all;
 }
 
 #root {
@@ -61,10 +62,12 @@ body {
 
 .item__chevron-container:hover {
   background-color: #1A2126;
+  cursor: pointer;
 }
 
 .item__chevron-container {
   align-self: stretch;
   display: flex;
   align-items: center;
+  min-width: 50px;
 }
