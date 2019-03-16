@@ -4,12 +4,12 @@ A searchable clipboard app for mac.
 
 Expand and collapse long strings:
 
-![long item](./clippy-long-text.gif)
+![long item](./clippy-long-text2.gif)
 
 
 Search for any item already copied:
 
-![search](./clippy-search.gif)
+![search](./clippy-search2.gif)
 
 Features:
 * Search
